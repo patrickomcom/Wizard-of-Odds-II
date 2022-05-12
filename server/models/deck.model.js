@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const DeckSchema = new mongoose.Schema({
+    userId: {
+        type:String
+    },
     name:{
         type:String,
         required: [true, "Deck must have a name entered."]

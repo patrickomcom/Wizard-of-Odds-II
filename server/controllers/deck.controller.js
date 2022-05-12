@@ -44,7 +44,7 @@ const updateDeck = (req, res) => {
 };
 
 const deleteDeck = (req, res) => {
-    Pet.deleteOne({ _id: req.params.id })
+    Deck.deleteOne({ _id: req.params.id })
         .then((deletedDeck) => {
             res.json({ deletedDeck });
         })
