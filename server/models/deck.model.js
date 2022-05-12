@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const DeckSchema = new mongoose.Schema({
-    userId: {
-        type:String
-    },
+    //userId: {
+    //    type:String
+    //},
     name:{
         type:String,
         required: [true, "Deck must have a name entered."]
@@ -12,8 +12,13 @@ const DeckSchema = new mongoose.Schema({
     colors:{
         type:String,
         possibleValues: ["U", "R", "G", "W", "B"],
-        required: [true, "Deck must have at least one color."]
     },
+    wins:{
+        type:Number
+    },
+    losses: {
+        type:Number
+    }
 },{timestamps:true})
 
 const Deck = mongoose.model("Deck", DeckSchema);
