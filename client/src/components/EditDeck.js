@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 
-const EditPet = (props) => {
+const EditDeck = (props) => {
     const { id } = useParams();
     const [name, setName] =useState("");
     const [colors, setColors] = useState("");
@@ -126,4 +126,4 @@ const EditPet = (props) => {
         );
     };
     
-    export default EditPet;
+    export default EditDeck;
